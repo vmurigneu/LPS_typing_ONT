@@ -249,7 +249,7 @@ process summary_checkm {
 process sylph_download_db {
         cpus 1
         label "cpu"
-        publishDir "$params.outdir/databases/sylph_database", mode: 'copy', pattern: "*.syldb"
+        publishDir "$params.outdir/databases/sylph", mode: 'copy', pattern: "*.syldb"
         input:
                 val(db)
         output:
@@ -289,7 +289,7 @@ process sylph {
 process sylph_tax_download_metadata {
         cpus 1
         label "cpu"
-        publishDir "$params.outdir/databases/sylph_database", mode: 'copy', pattern: "*.gz"
+        publishDir "$params.outdir/databases/sylph", mode: 'copy', pattern: "*.gz"
         input:
                 val(metadata_file)
         output:
